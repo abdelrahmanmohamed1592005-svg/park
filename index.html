@@ -12,7 +12,7 @@
     <!-- Open Graph / Social -->
     <meta property="og:title" content="Park Plaza Hotel — Luxury Stay in Downtown Cairo 🏨" />
     <meta property="og:description" content="Enjoy a comfortable and luxurious stay in central Cairo. Rated 4.8 by real guests." />
-    <meta property="og:image" content="https://abdelrahmanmohamed1592005-svg.github.io/park/خلفيه.jpg" />
+    <meta property="og:image" content="https://abdelrahmanmohamed1592005-svg.github.io/park/background.jpg" />
     <meta property="og:url" content="https://abdelrahmanmohamed1592005-svg.github.io/park/" />
     <meta property="og:type" content="website" />
 
@@ -37,7 +37,7 @@
         "longitude": 31.2421
       },
       "telephone": "+201028282244",
-      "url": "https://engbido187-wq.github.io/calma/",
+      "url": "https://abdelrahmanmohamed1592005-svg.github.io/park/",
       "checkinTime": "13:00:00",
       "checkoutTime": "12:00:00",
       "aggregateRating": {
@@ -94,7 +94,7 @@
         { "@type": "LocationFeatureSpecification", "name": "Laundry Service", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Elevator", "value": true }
       ],
-      "image": "https://engbido187-wq.github.io/calma/background.jpg",
+      "image": "https://abdelrahmanmohamed1592005-svg.github.io/park/background.jpg",
       "offers": {
         "@type": "Offer",
         "price": "1450.00",
@@ -135,17 +135,12 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background: url('خلفيه.jpg') no-repeat center center;
+            background: url('background.jpg') no-repeat center center;
             background-size: cover;
+            background-attachment: scroll; /* مهم جدًا للموبايل */
             color: var(--dark);
             line-height: 1.7;
             overflow-x: hidden;
-        }
-
-        @media (min-width: 1025px) {
-            body {
-                background-attachment: fixed;
-            }
         }
 
         h1, h2, h3, h4 {
@@ -453,7 +448,7 @@
 
         .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
@@ -492,13 +487,13 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-top: 60px;
         }
 
         .gallery-item {
-            height: 350px;
+            height: 250px;
             border-radius: 20px;
             overflow: hidden;
             position: relative;
@@ -524,14 +519,14 @@
 
         .amenities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
             margin-top: 50px;
         }
 
         .amenity-card {
             background: rgba(255,255,255,0.1);
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
             text-align: center;
             transition: transform 0.3s ease;
@@ -543,7 +538,7 @@
         }
 
         .amenity-icon {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 15px;
             color: var(--gold);
         }
@@ -575,8 +570,8 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
             margin-bottom: 60px;
         }
 
@@ -654,10 +649,6 @@
             background: #25D366;
         }
 
-        .facebook:hover {
-            background: #1877F2;
-        }
-
         .copyright {
             text-align: center;
             padding-top: 40px;
@@ -667,11 +658,20 @@
             font-weight: 300;
         }
 
+        /* Mobile Improvements */
         @media (max-width: 1024px) {
-            .hero h1 { font-size: 3.8rem; }
+            .hero h1 { font-size: 3.5rem; }
         }
 
         @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                min-height: 85vh;
+                padding: 50px 20px;
+            }
+            .hero h1 { font-size: 2.6rem; }
+            .hero p { font-size: 1.15rem; }
+            .section-title { font-size: 2.2rem; }
             .nav-menu {
                 position: fixed;
                 top: 90px;
@@ -691,20 +691,24 @@
                 right: 0;
             }
             .hamburger { display: block; }
-            .section-title { font-size: 2.2rem; }
-            .hero h1 { font-size: 3rem; }
-            .hero p { font-size: 1.2rem; }
             .floating-book {
-                bottom: 25px;
-                right: 25px;
-                padding: 15px 25px;
-                font-size: 0.95rem;
+                bottom: 20px;
+                right: 20px;
+                padding: 14px 22px;
+                font-size: 0.9rem;
+            }
+            .gallery-item {
+                height: 200px;
             }
         }
 
         @media (max-width: 480px) {
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.2rem; }
             .section-title { font-size: 1.8rem; }
+            .btn-booking {
+                padding: 16px 40px;
+                font-size: 1.1rem;
+            }
         }
 
         .animate {
@@ -756,7 +760,6 @@
             <a href="https://www.booking.com/hotel/eg/park-plazaaa-downtown-cairo.ar.html?aid=356980&label=gog235jc-10CAsoQ0IbcGFyay1wbGF6YWFhLWRvd250b3duLWNhaXJvSAFYA2hDiAEBmAEzuAEXyAEP2AED6AEB-AEBiAIBqAIBuALsrPLGBsACAdICJDc2NzI1NWEwLWYyN2YtNGE4Mi05ZjAxLTZiMzY1ZjNiNGM0Y9gCAeACAQ&sid=1e4af05f0c3a559074f3853ee94f1579&dest_id=-290692&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1759286883&srpvid=d50313b6b784006b&type=total&ucfs=1&" class="btn btn-booking animate">Book Now on Booking.com</a>
             <div class="live-availability animate">
                 <div class="rooms-left">"Rest with Confidence ღ"</div>
-                <div class="from-price">From EGP 1450/night — Includes breakfast & taxes</div>
             </div>
         </div>
     </div>
@@ -862,7 +865,7 @@
                 <div class="footer-section">
                     <div class="footer-logo"><span class="icon">🏨</span> Park Plaza Hotel</div>
                     <p>16 26 July St, Al Fawalah, Azbakeya, Cairo 11956</p>
-                    <p>Phone: <a href="tel:+0223951113" style="color: #ccc;">+20 102 828 2244</a></p>
+                    <p>Phone: <a href="tel:+201028282244" style="color: #ccc;">+20 102 828 2244</a></p>
                     <p>Email: <a href="mailto:info@parkplazacairo.com" style="color: #ccc;">info@parkplazacairo.com</a></p>
                     <div class="social-links">
                         <a href="https://wa.me/201028282244" class="social-link whatsapp" target="_blank" aria-label="WhatsApp">💬</a>
@@ -932,5 +935,4 @@
     </script>
 
 </body>
-
 </html>
