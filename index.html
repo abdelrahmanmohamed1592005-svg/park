@@ -136,8 +136,8 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background: url('background.jpg') no-repeat center center;
-            background-size: cover;
-            background-attachment: scroll; /* مهم للموبايل */
+            background-size: 100% 100%;
+            background-attachment: scroll;
             color: var(--dark);
             line-height: 1.7;
             overflow-x: hidden;
@@ -329,7 +329,6 @@
             padding: 0;
         }
 
-        /* ========= HERO - نفس الشكل على كل الأجهزة ========= */
         .hero {
             height: 100vh;
             display: flex;
@@ -442,58 +441,7 @@
             font-weight: 500;
         }
 
-        /* ========= إجبار نفس الشكل على الموبايل ========= */
-        @media (max-width: 1024px) {
-            .hero h1 { font-size: 4.5rem !important; }
-            .hero p { font-size: 1.4rem !important; }
-            .section-title { font-size: 2.8rem !important; }
-            .btn { padding: 15px 36px !important; font-size: 1rem !important; }
-            .btn-booking { padding: 20px 50px !important; font-size: 1.2rem !important; }
-            .floating-book {
-                bottom: 40px !important;
-                right: 40px !important;
-                padding: 18px 30px !important;
-                font-size: 1rem !important;
-            }
-            .rooms-left { font-size: 2.5rem !important; }
-            .from-price { font-size: 1.3rem !important; }
-        }
-
-        @media (max-width: 768px) {
-            /* نفس التصميم تمامًا — لا تغيير في الارتفاع أو الحجم */
-            .hero {
-                height: 100vh !important;
-                padding: 0 20px !important;
-            }
-            .hero h1 { font-size: 4.5rem !important; }
-            .hero p { font-size: 1.4rem !important; }
-            .rating { font-size: 1.2rem !important; }
-            .nav-menu {
-                position: fixed;
-                top: 90px;
-                right: -100%;
-                flex-direction: column;
-                background: rgba(0, 0, 0, 0.95);
-                width: 85%;
-                height: calc(100vh - 90px);
-                padding: 50px 30px;
-                box-shadow: -5px 0 30px rgba(0,0,0,0.3);
-                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-                z-index: 9999;
-                border-radius: 0 0 30px 30px;
-            }
-            .nav-menu.active {
-                right: 0;
-            }
-            .hamburger { display: block; }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 4.5rem !important; }
-            .hero p { font-size: 1.4rem !important; }
-        }
-
-        /* باقي الأقسام */
+        /* ============ REVIEWS ============ */
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -502,13 +450,38 @@
         }
 
         .review-card {
-            background: rgba(254, 248, 248, 0.6);
+            background: rgba(0, 0, 0, 0.6);
             padding: 30px;
             border-radius: 20px;
             box-shadow: var(--shadow);
             border: 1px solid rgba(255,255,255,0.2);
+            transition: var(--transition);
         }
 
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .review-author {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+
+        .review-stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* ============ GALLERY ============ */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -517,31 +490,79 @@
         }
 
         .gallery-item {
-            height: 250px;
+            height: 280px; /* متناسق مع العرض */
             border-radius: 20px;
             overflow: hidden;
+            position: relative;
             box-shadow: var(--shadow);
+            transition: var(--transition);
         }
 
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* يغطي المساحة كاملة بدون تشويه */
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ============ AMENITIES ============ */
         .amenities-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
+            gap: 30px;
             margin-top: 50px;
         }
 
         .amenity-card {
             background: rgba(255,255,255,0.1);
-            padding: 25px;
+            padding: 30px 20px;
             border-radius: 15px;
             text-align: center;
+            transition: var(--transition);
             border: 1px solid rgba(255,255,255,0.2);
         }
 
+        .amenity-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
         .amenity-icon {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
             color: var(--gold);
+            transition: transform 0.3s ease;
+        }
+
+        .amenity-card:hover .amenity-icon {
+            transform: scale(1.2);
+        }
+
+        /* ============ FOOTER & OTHERS ============ */
+        .booking-cta {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .booking-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .booking-cta p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
         }
 
         footer {
@@ -572,6 +593,11 @@
             transition: var(--transition);
         }
 
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
         .whatsapp:hover {
             background: #25D366;
         }
@@ -582,6 +608,28 @@
             border-top: 1px solid rgba(255,255,255,0.1);
             color: #aaa;
             font-size: 0.95rem;
+        }
+
+        /* ============ MOBILE MENU ============ */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 90px;
+                right: -100%;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.95);
+                width: 85%;
+                height: calc(100vh - 90px);
+                padding: 50px 30px;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.3);
+                transition: var(--transition);
+                z-index: 9999;
+                border-radius: 0 0 30px 30px;
+            }
+            .nav-menu.active {
+                right: 0;
+            }
+            .hamburger { display: block; }
         }
     </style>
 </head>
@@ -618,7 +666,6 @@
             <a href="https://www.booking.com/hotel/eg/park-plazaaa-downtown-cairo.ar.html?aid=356980&label=gog235jc-10CAsoQ0IbcGFyay1wbGF6YWFhLWRvd250b3duLWNhaXJvSAFYA2hDiAEBmAEzuAEXyAEP2AED6AEB-AEBiAIBqAIBuALsrPLGBsACAdICJDc2NzI1NWEwLWYyN2YtNGE4Mi05ZjAxLTZiMzY1ZjNiNGM0Y9gCAeACAQ&sid=1e4af05f0c3a559074f3853ee94f1579&dest_id=-290692&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1759286883&srpvid=d50313b6b784006b&type=total&ucfs=1&" class="btn btn-booking animate">Book Now on Booking.com</a>
             <div class="live-availability animate">
                 <div class="rooms-left">"Rest with Confidence ღ"</div>
-                <div class="from-price">From EGP 1450/night — Includes breakfast & taxes</div>
             </div>
         </div>
     </div>
