@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Plaza Hotel Cairo | Luxury Stay in Downtown Cairo</title>
+    <meta name="description" content="Experience luxury and comfort in the heart of Cairo. Real guest reviews, stunning gallery, and best available rates.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏨</text></svg>">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Park Plaza Hotel — Luxury Stay in Downtown Cairo 🏨" />
+    <meta property="og:description" content="Enjoy a comfortable and luxurious stay in central Cairo. Rated 4.8 by real guests." />
+    <meta property="og:image" content="https://engbido187-wq.github.io/calma/خلفيه.jpg" />
+    <meta property="og:url" content="https://engbido187-wq.github.io/calma/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Schema.org Hotel -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Park Plaza Hotel",
+      "description": "A luxury hotel in the heart of Cairo offering exceptional comfort, full services, and a strong commitment to sustainability.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "16 26 July St",
+        "addressLocality": "Azbakeya",
+        "addressRegion": "Cairo",
+        "postalCode": "11956",
+        "addressCountry": "EG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 30.0512,
+        "longitude": 31.2421
+      },
+      "telephone": "+201028282244",
+      "url": "https://engbido187-wq.github.io/calma/",
+      "checkinTime": "13:00:00",
+      "checkoutTime": "12:00:00",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "215",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": "Layla M.",
+          "datePublished": "2025-04-05",
+          "reviewBody": "Excellent location, friendly staff, and delicious breakfast. Highly recommend for families.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": "Karim A.",
+          "datePublished": "2025-03-20",
+          "reviewBody": "Clean and quiet rooms despite being in the city center. Wi-Fi is very fast.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": "Sara N.",
+          "datePublished": "2025-02-28",
+          "reviewBody": "Great service, though parking is limited. Breakfast includes excellent vegetarian options.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4",
+            "bestRating": "5"
+          }
+        }
+      ],
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Free Breakfast", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Sustainable", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Airport Shuttle", "value": "Available for a fee" },
+        { "@type": "LocationFeatureSpecification", "name": "24/7 Front Desk", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Restaurant", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Bar", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Laundry Service", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Elevator", "value": true }
+      ],
+      "image": "https://engbido187-wq.github.io/calma/background.jpg",
+      "offers": {
+        "@type": "Offer",
+        "price": "1450.00",
+        "priceCurrency": "EGP",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-04-01",
+        "itemOffered": {
+          "@type": "HotelRoom",
+          "name": "Deluxe Room"
+        }
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #003580;
+            --primary-light: #0052cc;
+            --white: #ffffff;
+            --dark: #000000;
+            --gray: #7a7a7a;
+            --light-gray: #f0f0f0;
+            --gold: #ffb400;
+            --shadow: 0 5px 25px rgba(0,0,0,0.08);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: url('خلفيه.jpg') no-repeat center center;
+            background-size: cover;
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 1025px) {
+            body {
+                background-attachment: fixed;
+            }
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--white);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        p, label, input, select {
+            color: var(--white);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-light);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--white);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 36px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 53, 128, 0.3);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 53, 128, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-large {
+            padding: 18px 48px;
+            font-size: 1.1rem;
+        }
+
+        .btn-booking {
+            background: #00a400;
+            border: 2px solid #00a400;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 20px 50px;
+        }
+
+        .btn-booking:hover {
+            background: #008a00;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 138, 0, 0.4);
+        }
+
+        section {
+            padding: 100px 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin: 0 auto 20px;
+            display: block;
+            color: var(--white);
+            position: relative;
+            width: fit-content;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+            z-index: 10000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.05rem;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--white);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover:after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--white);
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            color: var(--white);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            color: var(--white);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 30px;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .star {
+            color: var(--gold);
+            font-size: 1.4rem;
+        }
+
+        .floating-book {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 9999;
+            padding: 18px 30px;
+            background: #00a400;
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 10px 40px rgba(0, 164, 0, 0.4);
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .floating-book:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 164, 0, 0.5);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 10px 40px rgba(0, 164, 0, 0.4); }
+            50% { box-shadow: 0 10px 50px rgba(0, 164, 0, 0.6); }
+            100% { box-shadow: 0 10px 40px rgba(0, 164, 0, 0.4); }
+        }
+
+        .live-availability {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 600px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .rooms-left {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin: 10px 0;
+        }
+
+        .from-price {
+            font-size: 1.3rem;
+            color: #a0d8ef;
+            font-weight: 500;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .review-card {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: var(--transition);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .review-author {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+
+        .review-stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 60px;
+        }
+
+        .gallery-item {
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .amenity-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .amenity-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .amenity-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        .booking-cta {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .booking-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .booking-cta p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 100px 0 40px;
+            border-radius: 40px;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+            color: var(--gold);
+        }
+
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 14px;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            transition: var(--transition);
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .whatsapp:hover {
+            background: #25D366;
+        }
+
+        .facebook:hover {
+            background: #1877F2;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 3.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 90px;
+                right: -100%;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.95);
+                backdrop-filter: blur(20px);
+                width: 85%;
+                height: calc(100vh - 90px);
+                padding: 50px 30px;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.3);
+                transition: var(--transition);
+                z-index: 9999;
+                border-radius: 0 0 30px 30px;
+            }
+            .nav-menu.active {
+                right: 0;
+            }
+            .hamburger { display: block; }
+            .section-title { font-size: 2.2rem; }
+            .hero h1 { font-size: 3rem; }
+            .hero p { font-size: 1.2rem; }
+            .floating-book {
+                bottom: 25px;
+                right: 25px;
+                padding: 15px 25px;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section-title { font-size: 1.8rem; }
+        }
+
+        .animate {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo"><span class="logo-icon">🏨</span> Park Plaza Hotel</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate">
+            <div class="rating animate">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span>4.8 (215 real guest reviews)</span>
+            </div>
+            <h1 class="animate">Park Plaza Hotel</h1>
+            <p class="animate">Where luxury meets comfort in the heart of Cairo — an unforgettable experience awaits.</p>
+            <a href="https://www.booking.com/hotel/eg/park-plazaaa-downtown-cairo.ar.html?aid=356980&label=gog235jc-10CAsoQ0IbcGFyay1wbGF6YWFhLWRvd250b3duLWNhaXJvSAFYA2hDiAEBmAEzuAEXyAEP2AED6AEB-AEBiAIBqAIBuALsrPLGBsACAdICJDc2NzI1NWEwLWYyN2YtNGE4Mi05ZjAxLTZiMzY1ZjNiNGM0Y9gCAeACAQ&sid=1e4af05f0c3a559074f3853ee94f1579&dest_id=-290692&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1759286883&srpvid=d50313b6b784006b&type=total&ucfs=1&" class="btn btn-booking animate">Book Now on Booking.com</a>
+            <div class="live-availability animate">
+                <div class="rooms-left">"Rest with Confidence ღ"</div>
+                <div class="from-price">From EGP 1450/night — Includes breakfast & taxes</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FLOATING BOOK BUTTON ========== -->
+    <a href="https://www.booking.com/hotel/eg/park-plazaaa-downtown-cairo.ar.html?aid=356980&label=gog235jc-10CAsoQ0IbcGFyay1wbGF6YWFhLWRvd250b3duLWNhaXJvSAFYA2hDiAEBmAEzuAEXyAEP2AED6AEB-AEBiAIBqAIBuALsrPLGBsACAdICJDc2NzI1NWEwLWYyN2YtNGE4Mi05ZjAxLTZiMzY1ZjNiNGM0Y9gCAeACAQ&sid=1e4af05f0c3a559074f3853ee94f1579&dest_id=-290692&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1759286883&srpvid=d50313b6b784006b&type=total&ucfs=1&" class="floating-book" role="button">
+        ✨ Best Price Guaranteed
+    </a>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Park Plaza Hotel</h2>
+            <p style="color: white; text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                Located in the heart of Cairo, Park Plaza Hotel offers a luxurious stay with a strong commitment to sustainability. Enjoy full services, a strategic location, and a multilingual team dedicated to your comfort.
+            </p>
+            <div style="margin-top: 30px; text-align: center; color: #a0d8ef;">
+                <p><strong>Check-in:</strong> 1:00 PM | <strong>Check-out:</strong> 12:00 PM</p>
+                <p><strong>Address:</strong> 16 26 July St, Al Fawalah, Azbakeya, Cairo 11956</p>
+                <p><strong>Phone:</strong> <a href="tel:+201028282244" style="color: #a0d8ef;">+20 102 828 2244</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== REVIEWS ========== -->
+    <section id="reviews">
+        <div class="container">
+            <h2 class="section-title">Guest Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">Layla M. • April 2025</div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p>“Excellent location, friendly staff, and delicious breakfast. Highly recommend for families.”</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">Karim A. • March 2025</div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p>“Clean and quiet rooms despite being in the city center. Wi-Fi is very fast.”</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">Sara N. • February 2025</div>
+                        <div class="review-stars">★★★★☆</div>
+                    </div>
+                    <p>“Great service, though parking is limited. Breakfast includes excellent vegetarian options.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="room1.jpg" alt="Luxury Room - Park Plaza Hotel"></div>
+                <div class="gallery-item"><img src="room2.jpg" alt="Deluxe Room - Park Plaza Hotel"></div>
+                <div class="gallery-item"><img src="room8.jpg" alt="Restaurant - Park Plaza Hotel"></div>
+                <div class="gallery-item"><img src="bathroom.jpg" alt="Lobby - Park Plaza Hotel"></div>
+                <div class="gallery-item"><img src="reception.jpg" alt="Reception Area - Park Plaza Hotel"></div>
+                <div class="gallery-item"><img src="view.jpg" alt="Family Room - Park Plaza Hotel"></div>
+                <div class="gallery-item"><img src="breakfast.jpg" alt="City View - Park Plaza Hotel"></div>
+                <div class="gallery-item"><img src="room9.jpg" alt="Bar - Park Plaza Hotel"></div>
+                <div class="gallery-item"><img src="room10.jpg" alt="Breakfast Buffet - Park Plaza Hotel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== AMENITIES ========== -->
+    <section id="amenities">
+        <div class="container">
+            <h2 class="section-title">Amenities & Services</h2>
+            <div class="amenities-grid">
+                <div class="amenity-card"><div class="amenity-icon">🌿</div><h3>Sustainability</h3><p>Energy-efficient systems, local organic food, and plastic reduction.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">☕</div><h3>Free Breakfast</h3><p>Diverse buffet with vegetarian and organic options.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">📶</div><h3>Free Wi-Fi</h3><p>High-speed internet throughout the hotel.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">🚗</div><h3>Parking</h3><p>Available for a fee (self-parking & valet).</p></div>
+                <div class="amenity-card"><div class="amenity-icon">🧳</div><h3>24/7 Front Desk</h3><p>Instant assistance, luggage storage, and concierge.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">✈️</div><h3>Airport Shuttle</h3><p>Available for a fee upon request.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">🍽️</div><h3>Restaurant & Bar</h3><p>24/7 room service and elegant bar.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">🧺</div><h3>Laundry</h3><p>Self-service and professional laundry options.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BOOKING CTA ========== -->
+    <section class="booking-cta">
+        <div class="container">
+            <h2>Ready to Experience Park Plaza?</h2>
+            <p>Rooms sell out fast! Book now on Booking.com for the best rate, instant confirmation, and free cancellation.</p>
+            <a href="https://www.booking.com/hotel/eg/park-plazaaa-downtown-cairo.ar.html?aid=356980&label=gog235jc-10CAsoQ0IbcGFyay1wbGF6YWFhLWRvd250b3duLWNhaXJvSAFYA2hDiAEBmAEzuAEXyAEP2AED6AEB-AEBiAIBqAIBuALsrPLGBsACAdICJDc2NzI1NWEwLWYyN2YtNGE4Mi05ZjAxLTZiMzY1ZjNiNGM0Y9gCAeACAQ&sid=1e4af05f0c3a559074f3853ee94f1579&dest_id=-290692&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1759286883&srpvid=d50313b6b784006b&type=total&ucfs=1&" class="btn btn-booking">Book Now</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo"><span class="icon">🏨</span> Park Plaza Hotel</div>
+                    <p>16 26 July St, Al Fawalah, Azbakeya, Cairo 11956</p>
+                    <p>Phone: <a href="tel:+0223951113" style="color: #ccc;">+20 102 828 2244</a></p>
+                    <p>Email: <a href="mailto:info@parkplazacairo.com" style="color: #ccc;">info@parkplazacairo.com</a></p>
+                    <div class="social-links">
+                        <a href="https://wa.me/201028282244" class="social-link whatsapp" target="_blank" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#amenities">Amenities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Why Guests Love Us</h3>
+                    <ul>
+                        <li>⭐ 4.8/5 from 215+ reviews</li>
+                        <li>📍 Prime downtown location</li>
+                        <li>🍳 Free healthy breakfast</li>
+                        <li>🌿 Sustainability commitment</li>
+                        <li>🌍 Multilingual staff</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Park Plaza Hotel. By: Eng Abdelrahman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    hamburger.textContent = '☰';
+                }
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 150) {
+                nav.style.padding = '15px 0';
+                nav.style.background = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                nav.style.padding = '25px 0';
+                nav.style.background = 'rgba(0, 0, 0, 0.8)';
+            }
+        });
+    </script>
+
+</body>
+</html>
